@@ -1,15 +1,15 @@
 #include <stdio.h>
-#include <ctype.h> // Oi, daives, adicionei essa biblioteca para o uso do toupper.
+#include <ctype.h> // Oi, D#####, adicionei essa biblioteca para o uso do toupper.
 
 int main() {
     char carro;
     int percurso;
-    int consumo;
+    float consumo; 
     
     printf("Informe o tipo de carro, sendo eles: A, B e C\n");
     scanf(" %c", &carro);
 
-    // utilizei para converter os caracteres para maisculo, assim evitando erros.
+     // Utilizei para converter os caracteres para maisculo, assim evitando erros.
     carro = toupper(carro);
 
     switch (carro) {
@@ -17,25 +17,25 @@ int main() {
             printf("Informe o percurso rodado em KM: \n");
             scanf("%d", &percurso);
 
-            consumo = percurso / 8;
+            consumo = (float)percurso / 8; 
 
-            printf("Seu consumo foi de: %d\n", consumo);
+            printf("Seu consumo foi de: %.2f\n", consumo); 
             break;
         case 'B':
             printf("Informe o percurso rodado em KM: \n");
             scanf("%d", &percurso);
 
-            consumo = percurso / 9;
+            consumo = (float)percurso / 9; 
 
-            printf("Seu consumo foi de: %d\n", consumo);
+            printf("Seu consumo foi de: %.2f\n", consumo);
             break;
         case 'C':
             printf("Informe o percurso rodado em KM: \n");
             scanf("%d", &percurso);
 
-            consumo = percurso / 12;
+            consumo = (float)percurso / 12; 
 
-            printf("Seu consumo foi de: %d\n", consumo);
+            printf("Seu consumo foi de: %.2f\n", consumo); 
             break;
         default:
             printf("Tipo de carro inválido.\n");
